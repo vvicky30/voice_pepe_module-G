@@ -1,0 +1,23 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "voice_pepe"
+version = "0.1.0"
+description = "A python module which takes audio-input as a message from user, message probably contains 'cut' keyword to specify line-break for cursor, then print it within Dynamic-message-bubble ASCII-art over the 'pepe the frog' ASCII-art"
+authors = ["Vedant Bhatt <vedantbhatt3240@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+speechrecognition = "^3.8.1"
+cowsay = "^3.0.0"
+pyaudio = "^0.2.14"
+
+
+
+[tool.poetry.scripts]
+voice_pepe = "voice_pepe.__main__:main"
+
+[tool.poetry.extras]
+dev = ["pytest"]
